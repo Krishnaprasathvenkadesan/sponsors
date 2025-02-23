@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .sponsors-section {
+            padding: 4rem 2rem;
+            margin-top: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .sponsors-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .sponsors-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: url('jgj4.jpg') no-repeat center center / cover;
+            border-radius: 3px;
+        }
+
+        .sponsors-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sponsor-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .sponsor-logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .sponsor-logo img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .sponsor-card:hover .sponsor-logo img {
+            transform: scale(1.05);
+        }
+
+        .sponsor-name {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .sponsor-type {
+            font-size: 1rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 968px) {
+            .sponsors-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sponsors-container {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .sponsors-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .sponsors-title {
+                font-size: 1.8rem;
+            }
+
+            .sponsor-card {
+                padding: 1.5rem;
+            }
+
+            .sponsor-logo {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="sponsors" class="sponsors-section">
+        <h2 class="sponsors-title">Our Sponsors</h2>
+        <div class="sponsors-container">
+            <div class="sponsor-card">
+                <div class="sponsor-logo">
+                    <img src="poorvika.png" alt="Sponsor 1">
+                </div>
+                <h3 class="sponsor-name">Poorvika</h3>
+                <p class="sponsor-type">Title Sponsor</p>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-logo">
+                    <img src="tony.png" alt="Sponsor 2">
+                </div>
+                <h3 class="sponsor-name">Tony&Guy</h3>
+                <p class="sponsor-type">Co-Sponsor</p>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-logo">
+                    <img src="ts.png" alt="Sponsor 3">
+                </div>
+                <h3 class="sponsor-name">TS Robotics</h3>
+                <p class="sponsor-type">Associate Sponsor</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
